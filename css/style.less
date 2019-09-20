@@ -1,0 +1,68 @@
+/*
+    Brand Colors
+*/
+@youtube-color: #FF0000;
+@twitter-color: #1DA1F2;
+@facebook-color: #3C5A99;
+
+
+/*
+    Customizable settings
+*/
+@icon-background-color: #ddd;
+@icon-radius: 5px;
+@icon-size: 30px;
+@icon-transition-speed: 0.3s;
+
+.social-media-bar {
+    margin: 3rem;
+
+    .button {
+        display: inline-block;
+        background-color: @icon-background-color;
+        border-radius: @icon-radius;
+        width: @icon-size;
+        color: unset;
+        height: @icon-size;
+        cursor: pointer;
+        transition: transform @icon-transition-speed ease;
+
+        &[brand-icon *="youtube"] {
+            box-shadow: 0 2px @youtube-color;
+        }
+
+        &[brand-icon *="twitter"] {
+            box-shadow: 0 2px @twitter-color;
+
+        }
+
+        &[brand-icon *="facebook"] {
+            box-shadow: 0 2px @facebook-color;
+        }
+
+        &:hover {
+            background-color: darken(#ddd, 10%);
+            transform: translateY(-5px);
+
+            [class *="youtube"] {
+                color: @youtube-color;
+            }
+
+            [class *="twitter"] {
+                color: @twitter-color;
+            }
+
+            [class *="facebook"] {
+                color: @facebook-color;
+            }
+        }
+
+        .icon {
+            display: flex;
+            place-content: center;
+            height: 100%;
+            align-items: center;
+            color: #666;
+        }
+    }
+}

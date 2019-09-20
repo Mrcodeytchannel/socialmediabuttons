@@ -1,0 +1,48 @@
+/*
+    Brand Colors
+*/
+/*
+    Customizable settings
+*/
+.social-media-bar {
+  margin: 3rem;
+}
+.social-media-bar .button {
+  display: inline-block;
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 30px;
+  color: unset;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.social-media-bar .button[brand-icon*="youtube"] {
+  box-shadow: 0 2px #FF0000;
+}
+.social-media-bar .button[brand-icon*="twitter"] {
+  box-shadow: 0 2px #1DA1F2;
+}
+.social-media-bar .button[brand-icon*="facebook"] {
+  box-shadow: 0 2px #3C5A99;
+}
+.social-media-bar .button:hover {
+  background-color: #c4c4c4;
+  transform: translateY(-5px);
+}
+.social-media-bar .button:hover [class*="youtube"] {
+  color: #FF0000;
+}
+.social-media-bar .button:hover [class*="twitter"] {
+  color: #1DA1F2;
+}
+.social-media-bar .button:hover [class*="facebook"] {
+  color: #3C5A99;
+}
+.social-media-bar .button .icon {
+  display: flex;
+  place-content: center;
+  height: 100%;
+  align-items: center;
+  color: #666;
+}
